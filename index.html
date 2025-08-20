@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>حساب أمان الإطار</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>إدخال بيانات الإطار</h1>
+  <form id="frameForm">
+    <label>ارتفاع الأعمدة (مم): <input id="colHeight" type="number" value="15000"></label>
+    <label>عرض الإطار (مم): <input id="frameWidth" type="number" value="50000"></label>
+    <label>الحمل الميت (kg/m): <input id="deadLoad" type="number" value="10"></label>
+    <label>الحمل الحي (kg/m): <input id="liveLoad" type="number" value="4"></label>
+    <label>الرياح (kg لكل عمود): <input id="windLoad" type="number" value="9600"></label>
+    <label>معامل الخضوع fy (MPa): <input id="fy" type="number" value="325"></label>
+    <label>معامل يونج E (GPa): <input id="E" type="number" value="210"></label>
+    <label>عرض مقطع الأعمدة (مم): <input id="colWidth" type="number" value="100"></label>
+    <label>عمق مقطع الأعمدة (مم): <input id="colDepth" type="number" value="50"></label>
+    <label>عرض مقطع الرافتر (مم): <input id="beamWidth" type="number" value="100"></label>
+    <label>عمق مقطع الرافتر (مم): <input id="beamDepth" type="number" value="50"></label>
+  </form>
+
+  <button onclick="analyzeFrame()">احسب الأمان</button>
+
+  <div id="output"></div>
+  <svg id="frameSVG" width="800" height="600"></svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
